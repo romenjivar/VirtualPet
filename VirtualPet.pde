@@ -1,40 +1,34 @@
 void setup()
 {
-  background(255,255,255);
-  size(400,400);
+ 
+size(600,600);
 }
+void draw() {
 
-void draw()
-{
-  // THIS IS THE BACKGROUND
-  noStroke();
-  fill(100,100,100);
-  rect(0,250,500,500);
-  fill(0,200,200);
-  rect(0,0,400,250);
-  fill(255,255,0);
-  arc(0,0,200,200,0,PI/2);
-  stroke(0,0,0);
-  // THIS IS THE CREEPER
-  fill(40,165,0);
- rect(115,290,50,90);
- rect(235,290,50,90);
- rect(150,50,100,300); 
- rect(125,25,150,150);
- rect(125,300,50,90);
- rect(225,300,50,90);
- //EYES
-   fill(25,25,25);
- rect(135,50,45,45);
- rect(220,50,45,45);
-   fill(0,0,0);
-  //MOUTH, FIRST 2 FOR EYES SMALL
- rect(155,70,25,25);
- rect(220,70,25,25);
- rect(177,95,45,50);
- rect(165,120,20,45);
- rect(213,120,20,45);
- noStroke();
- fill(25,25,25);
- rect(177,105,46,20);
+background(125,225,225);
+line(mouseX, mouseY, mouseX, mouseY);
+fill(0,0,0);
+text(mouseX + ", "+mouseY,20,20);
+
+noStroke();
+fill(175,175,175);
+ellipse(300,350,400,75);
+ellipse(315,325,300,60);
+triangle(440,308,470,370,550,340);
+fill(225,225,225);
+ellipse(290,370,250,35);
+
+fill(255,255,255);
+ellipse(175,330,50,50);
+fill(0,0,0);
+ellipse(162,330,30,30);
+
+fill(175,175,175);
+triangle(275,325,405,325,405,200);
+triangle(235,350,295,350,305,445);
+triangle(475,320,550,340,560,250);
+triangle(480,365,550,340,545,400);
+fill(125,225,225);
+triangle(555,320,550,355,520,335);
+
 }
