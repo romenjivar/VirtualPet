@@ -1,9 +1,17 @@
-void setup()
-{
- 
-size(600,600);
+import processing.serial.*;
+import cc.arduino.*;
+Arduino arduino;
+
+public void setup() {
+  size(600, 600);
+  arduino = new Arduino(this, Arduino.list()[0], 57600); //change the [0] to a [1] or [2] etc. if your program doesn't work
 }
-void draw() {
+
+public void draw() {
+  background(192);
+  int y = arduino.analogRead(5);
+  System.out.println(y);
+
 
 background(125,225,225);
 line(mouseX, mouseY, mouseX, mouseY);
@@ -32,3 +40,4 @@ fill(125,225,225);
 triangle(555,320,550,355,520,335);
 
 }
+
