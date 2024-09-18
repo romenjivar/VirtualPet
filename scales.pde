@@ -28,9 +28,9 @@ void draw(){
 
 void scale(int x, int y){
   noStroke();
-  rRandom = (int)(Math.random()*255);
-  gRandom = (int)(Math.random()*255);
-  bRandom = (int)(Math.random()*255);
+  rRandom = (int)(Math.random()*27+8);
+  gRandom = (int)(Math.random()*130+70);
+  bRandom = (int)(Math.random()*25+10);
  fill(0);
  rect(x,y,40,20);
  ellipse(x+20,y+20,40,40);
