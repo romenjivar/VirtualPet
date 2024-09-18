@@ -1,23 +1,42 @@
+int rRandom = 0;
+int gRandom = 0;
+int bRandom = 0;
+boolean shift = true;
+
 void setup(){
+  noLoop();
  size(600,600); 
 }
 
 void draw(){
   background(155,0,155);
-  for(int y = 0; y < 600; y += 40)
-    for(int x = 0; x < 600; x += 40)
-  scale(x,y);
+  for(int y = -20; y < 600; y += 34)
+  {
+    for(int x = -20; x < 600; x += 30)
+    {
+    if(shift == true)
+     scale(x+15,y); 
+     else
+     scale(x,y);
+    }
+    if(shift == true)
+    shift = false;
+    else
+    shift = true;
+  }
 }
 
 void scale(int x, int y){
   noStroke();
- int rRandom = (int)(Math.random()*255);
- int gRandom = (int)(Math.random()*255);
- int bRandom = (int)(Math.random()*255);
- fill(rRandom, gRandom, bRandom);
+  rRandom = (int)(Math.random()*255);
+  gRandom = (int)(Math.random()*255);
+  bRandom = (int)(Math.random()*255);
+ fill(0);
+ rect(x,y,40,20);
  ellipse(x+20,y+20,40,40);
- rect(x,y,40,20);
- fill(155,0,155);
+ fill(rRandom, gRandom, bRandom);
+ rect(x+5,y+5,30,20);
  ellipse(x+20,y+20,30,30);
- rect(x,y,40,20);
+ 
+
 }
